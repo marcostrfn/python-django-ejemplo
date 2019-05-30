@@ -1,0 +1,28 @@
+{% extends 'apptest/boot_base.html' %}
+
+{% block content %}
+
+	{% include "apptest/boot_nav.html" %}
+	
+	<main role="main" class="container">
+	  <div class="starter-template">
+		<h1>Bootstrap starter template {{dato}}</h1>
+		<p class="lead">Use this document as a way to quickly start any new project.<br> All you get is this text and a mostly barebones HTML document.</p>
+	  </div>
+	</main><!-- /.container -->
+
+	{% include "apptest/boot_js.html" %}
+	
+	
+	<script>
+	$(document).ready(function() {
+		$('#testjson').click(function(){
+			$.getJSON( "/test/test_json", function( data ) {
+				alert(data.foo);
+			});	
+		});
+	});
+	</script>
+
+{% endblock %}
+
