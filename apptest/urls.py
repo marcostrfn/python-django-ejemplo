@@ -10,4 +10,5 @@ urlpatterns = [
 	url('noautorizado/$', views.no_autorizado, name='no_autorizado'),
 	url('autenticar/$', views.autenticar, name='autenticar'),
 	url('upload/$', views.upload, name='upload'),
+	url('upload_pdf/$', views.upload_pdf, name='upload_pdf'),
 ]
